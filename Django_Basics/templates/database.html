@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <center><h1> DataBase </h1><center>  
+    <table>
+        <tr>
+            <th>RollNo</th>
+            <th>Name</th>
+            <th>email</th>
+            <th>phoneNumber</th>
+        </tr>
+        {% for Student in Students %}
+        <tr>
+            <td>{{ Student.RollNo}}</td>
+            <td>{{Student.Name}} </td>
+            <td>{{Student.email}}</td>
+            <td>{{Student.phoneNumber}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+{% endblock content %}
